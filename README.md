@@ -1,17 +1,19 @@
 # StudentDatabase
 Final Project Student Database
-/***************************************************************
+
+
+/*******************************************
 StudentDatabaseProgram.h
 Huda Biltagi
 5 / 2019
-*************************************************************/
+********************************************/
 
 #include<iostream>
 #include<string>
 #include<iomanip>
 using namespace std;
 
-// Base student class
+// Base Student class
 class Student  
 {
 private:
@@ -32,7 +34,7 @@ Student()
 		
 }
 
-// custom Student constructor
+// Custom Student constructor
 Student(string fn, string ln, int idn) 
 {
 	fname = fn;
@@ -86,8 +88,7 @@ virtual void display()
 class ElementaryStu : public Student
 {
 private:
-
-	int ElemGrade;   // stores elementary grade level (1,2,4,5..)
+int ElemGrade;   // stores elementary grade level (1,2,4,5..)
 
 public:
 
@@ -107,7 +108,7 @@ ElementaryStu(int e_g, string e_fn, string e_ln, int e_idn)
 	setId(e_idn);
 }
 
-// Prints elementary student information
+// Prints elementary student data
  void display()
 {
 	cout << setw(16) << "Student's name :" << setw(4) << getfirstname() << "  " << getlastname() << endl;
@@ -121,7 +122,6 @@ class MiddleStu : public Student
 {
 
 private:
-
 int MidGrade;	// stores middle school grade
 
 public:
@@ -141,7 +141,7 @@ MiddleStu(int mg, string m_fn, string m_ln, int m_idn)
 	setId(m_idn);
 }
 
-// Prints middle school student information
+// Prints middle school student data
  void display()
 {
 	cout << setw(16) << "Student's name: " << setw(4) << getfirstname() << "  " << getlastname() << endl;
@@ -178,15 +178,15 @@ int main()
 
 	// Array of Elemntary Student objects
 	ElementaryStu Mrs_DuggansClassroom[NUM_CLASSROOM_STUDENTS] = {	ElementaryStu(2,"Sarah", "Willson", 2000),
-																	ElementaryStu(2,"Jessica", "Offers", 2001),
-																	ElementaryStu(2,"Amia", "Vest",2002),
-																	ElementaryStu(2,"Evalina", "Tuttle",2003),
-																	ElementaryStu(2,"John", "Smith",2004),
-																	ElementaryStu(2,"Evan", "Jakoob",2005),
-																	ElementaryStu(2,"Sevet", "Johns",2006),
-																	ElementaryStu(2,"Willow", "Andrew",2007),
-																	ElementaryStu(2,"Watson", "Levins",2008),
-																	ElementaryStu(2,"Jackson", "Tu",2009)		};
+																										ElementaryStu(2,"Jessica", "Offers", 2001),
+																										ElementaryStu(2,"Amia", "Vest",2002),
+																										ElementaryStu(2,"Evalina", "Tuttle",2003),
+																										ElementaryStu(2,"John", "Smith",2004),
+																										ElementaryStu(2,"Evan", "Jakoob",2005),
+																										ElementaryStu(2,"Sevet", "Johns",2006),
+																										ElementaryStu(2,"Willow", "Andrew",2007),
+																										ElementaryStu(2,"Watson", "Levins",2008),
+																										ElementaryStu(2,"Jackson", "Tu",2009)		};
 
 	// For loop to display the classroom roster
 	cout << "---------------------------------------------------------" << endl << endl;
@@ -201,16 +201,16 @@ int main()
 
 
 	// Array of Middle Student objects
-	MiddleStu Mr_TraversoClassroom[NUM_CLASSROOM_STUDENTS] = {  MiddleStu(7,"Witson", "Levers",7000),
-																MiddleStu(7,"Hannah", "Jenkins",7001),
-																MiddleStu(7,"Juan", "Homles",7002),
-																MiddleStu(7,"Emily", "Debrough",7003),
-																MiddleStu(7,"Alice", "DeSilva",7004),
-																MiddleStu(7, "Aviv", "Jetter", 7005),
-																MiddleStu(7, "Philip", "Finkel", 7006),
-																MiddleStu(7, "Greg", "Watson", 7007),
-																MiddleStu(7, "Kim", "Hughes", 7008),
-																MiddleStu(7, "Jose", "Sander", 7009) };
+	MiddleStu Mr_TraversoClassroom[NUM_CLASSROOM_STUDENTS] = { 	 MiddleStu(7,"Witson", "Levers",7000),
+																										MiddleStu(7,"Hannah", "Jenkins",7001),
+																										MiddleStu(7,"Juan", "Homles",7002),
+																										MiddleStu(7,"Emily", "Debrough",7003),
+																										MiddleStu(7,"Alice", "DeSilva",7004),
+																										MiddleStu(7, "Aviv", "Jetter", 7005),
+																										MiddleStu(7, "Philip", "Finkel", 7006),
+																										MiddleStu(7, "Greg", "Watson", 7007),
+																										MiddleStu(7, "Kim", "Hughes", 7008),
+																										MiddleStu(7, "Jose", "Sander", 7009) };
 
 
 	// For loop to display the classroom roster
